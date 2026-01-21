@@ -39,4 +39,4 @@ build/
 .DS_Store
 
 ## Code
-src/main/java/org/example/TimePassed.java
+/src/main/java/org/example/TimePassed.java
