@@ -1,5 +1,6 @@
 package org.example.exampelEtt;
 
+
 public class SalabokningProcedural {
 
     public static void status(String sal, String person, String tid) {

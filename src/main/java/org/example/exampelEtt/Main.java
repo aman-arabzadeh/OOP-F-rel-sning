@@ -5,24 +5,35 @@ public class Main {
 
         LaroSal e228 = new LaroSal("E228");
 
-        boolean bokaNu = e228.boka("Aman Arabzadeh", "2026-01-21 kl 10:00");
+        bokaOchVisa(e228, "Aman Arabzadeh", "2026-01-21 kl 10:00");
+        bokaOchVisa(e228, "Sara Johansson", "2026-01-21 kl 10:00");
+    }
 
-        if (bokaNu) {
-            System.out.println("Salen är bokad av: " + e228.getbokadAv());
+    private static void bokaOchVisa(LaroSal sal, String person, String tid) {
+        boolean lyckades = sal.boka(person, tid);
+
+        if (lyckades) {
+            System.out.println("Salen är bokad av: " + sal.getBokadAv());
         } else {
-            System.out.println("Bokningen misslyckades.");
+            System.out.println("Kunde inte boka: Salen är redan upptagen av " + sal.getBokadAv());
         }
 
-        System.out.println(e228.status());
-
-        boolean bokaIdag = e228.boka("Erik Johansson", "2026-01-21 kl 10:00");
-
-        if (bokaIdag) {
-            System.out.println("Salen är bokad av: " + e228.getbokadAv());
-        } else {
-            System.out.println("Kunde inte boka: Salen är redan upptagen av " + e228.getbokadAv());
-        }
-
-        System.out.println(e228.status());
+        System.out.println(sal.status());
+        System.out.println("\n----------------------------------------");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// “Data + regler hör ihop → därför ligger de i samma objekt.”
+

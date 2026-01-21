@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+## Code
+src/main/java/org/example/TimePassed.java

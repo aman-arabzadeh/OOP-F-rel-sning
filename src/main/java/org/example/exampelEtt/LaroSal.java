@@ -2,30 +2,29 @@ package org.example.exampelEtt;
 
 public class LaroSal {
     private String salNummer;
-    private String tid;
-    private String  person;
+    private String bokadAv;
+    private String bokadTid;
 
 
-    LaroSal(String salNummer){
+    public LaroSal(String salNummer){
         this.salNummer = salNummer;
     }
 
-    // boka
-    public boolean boka(String person, String tid) {
-        if (this.tid != null) {
+
+    public boolean boka(String person, String tid){
+        if(this.bokadTid != null){
             return false;
         }
-        this.tid = tid;
-        this.person = person;
-        return true;
+        this.bokadTid = tid;
+        this.bokadAv = person;
+        return  true;
     }
 
 
-    public String status() {
-        return "Lärosal Status: " + salNummer + ": " + person + " : " + tid;
+    public String status(){
+        return "Lärosal status: " + salNummer + " : " + bokadAv + " : " + bokadTid;
     }
-
-    public String getbokadAv() {
-        return person;
+    public String getBokadAv() {
+        return bokadAv;
     }
 }
