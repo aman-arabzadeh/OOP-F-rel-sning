@@ -9,20 +9,20 @@ public class LaroSal {
         this.salNummer = salNummer;
     }
 
-    public boolean isBokad() {
+    public boolean arBokad() {
         return bokadTid != null;
     }
 
 
     public boolean boka(String person, String tid) {
-        if (isBokad()) return false;
+        if (arBokad()) return false;
         bokadAv = person;
         bokadTid = tid;
         return true;
     }
 
     public String status() {
-        if (!isBokad()) {
+        if (!arBokad()) {
             return "LaroSal{salNummer='" + salNummer + "', ledig}";
         }
         return "LaroSal{salNummer='" + salNummer + "', bokadAv='" + bokadAv + "', bokadTid='" + bokadTid + "'}";

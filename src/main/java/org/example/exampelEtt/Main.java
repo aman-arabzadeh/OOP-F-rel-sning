@@ -27,13 +27,3 @@ public class Main {
 
 
 
-
-
-
-
-
-
-
-
-// “Data + regler hör ihop → därför ligger de i samma objekt.”
-
